@@ -1,0 +1,22 @@
+---
+title: "Developing Data Products Week3 Assignment"
+author: "Gavin Kim"
+date: "2017-1-4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## scatter 3d plot using plotly
+
+```{r plotly}
+suppressPackageStartupMessages(library(plotly))
+set.seed(2017-01-04)
+temp <- rnorm(100, mean = 30, sd = 5)
+pressue <- rnorm(100)
+dtime <- 1:100
+plot_ly(x = ~temp, y = ~pressue, z = ~dtime, type = "scatter3d", color = ~temp, mode = "markers")
+
+```
